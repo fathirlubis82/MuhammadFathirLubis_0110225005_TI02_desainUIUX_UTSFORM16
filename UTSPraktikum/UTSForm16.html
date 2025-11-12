@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Ruangan</title>
+    <style>
+        /* Gaya dasar agar terlihat lebih rapi */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-container { max-width: 600px; margin: auto; border: 1px solid #ccc; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; /* Agar padding tidak menambah lebar */
+            border: 1px solid #000;
+        }
+        textarea { resize: vertical; height: 100px; }
+        .checkbox-group label { display: inline; font-weight: normal; margin-right: 15px; }
+        .button-group button { padding: 10px 20px; margin-right: 10px; cursor: pointer; border: 1px solid #000; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <fieldset>
+        <legend>Booking Ruangan</legend>
+        <form action="#" method="POST"> <div class="form-group">
+                <label for="nama_peminjam">Nama Peminjam :</label>
+                <input type="text" id="nama_peminjam" name="nama_peminjam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nama_ruangan">Nama Ruangan :</label>
+                <select id="nama_ruangan" name="nama_ruangan" required style="width: 150px; display: inline-block;">
+                    <option value="aula_cenderawasih">Aula Cenderawasih</option>
+                    <option value="ruang_melati">Ruang Melati</option>
+                    <option value="ruang_mawar">Ruang Mawar</option>
+                    <option value="ruang_CENDIKI">Ruang Mawar</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="deskripsi_kegiatan">Deskripsi Kegiatan :</label>
+                <textarea id="deskripsi_kegiatan" name="deskripsi_kegiatan" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Fasilitas Tambahan :</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sound_system" name="fasilitas[]" value="sound_system">
+                    <label for="sound_system">Sound System</label>
+
+                    <input type="checkbox" id="wifi" name="fasilitas[]" value="wifi">
+                    <label for="wifi">Wifi</label>
+
+                    <input type="checkbox" id="layar_besar" name="fasilitas[]" value="layar_besar">
+                    <label for="layar_besar">Layar Besar</label>
+
+                    <input type="checkbox" id="katering" name="fasilitas[]" value="katering">
+                    <label for="katering">Katering</label>
+                </div>
+            </div>
+                
+            
+
+            <div class="form-group">
+                <label for="tanggal_pinjam">Tanggal Pinjam :</label>
+                <input type="date" id="tanggal_pinjam" name="tanggal_pinjam" required style="width: 150px; display: inline-block;">
+                </div>
+            <div>
+                <label for="nama_peminjam">Kontak Person :</label>
+                <input type="text" id="nama_peminjam" name="nama_peminjam" required>
+                
+            </div>
+            <div>
+                <label for="nama_peminjam">Telphon/HP:</label>
+                <input type="text" id="nama_peminjam" name="nama_peminjam" required>
+                
+            </div>
+            <div>
+                <label for="nama_peminjam">Email:</label>
+                <input type="text" id="nama_peminjam" name="nama_peminjam" required>
+            </div>
+            </fieldset>
+
+            <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+
+        
